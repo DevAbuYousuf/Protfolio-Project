@@ -759,6 +759,186 @@ form .btn{
     cursor: pointer;
     border: none;
 }
+.contact-info {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.main-text {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.main-text .heading {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.main-text span {
+    font-size: 16px;
+    color: #777;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* Contact Grid */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* Contact Card */
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 25px;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top Hover Line */
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-color-bg);
+    transition: width 0.35s ease;
+}
+
+.contact-card:hover::before {
+    width: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--main-color);
+}
+
+/* Icon */
+
+.contact-icon {
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(0, 168, 255, 0.1);
+    transition: all 0.35s ease;
+}
+
+.contact-icon i {
+    font-size: 25px;
+    color: var(--main-color)
+}
+
+.contact-card:hover .contact-icon {
+    background: var(--main-color);
+    transform: rotate(5deg);
+}
+
+.contact-card:hover .contact-icon i {
+    color: #ffffff;
+}
+
+/* Content */
+
+.contact-content {
+    min-width: 0;
+}
+
+.contact-content span {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.contact-content h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.contact-content a {
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-content a:hover {
+    color: #00a8ff;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .contact-info {
+        padding: 45px 15px;
+    }
+
+    .main-text .heading {
+        font-size: 34px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-text .heading {
+        font-size: 30px;
+    }
+
+    .contact-card {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .contact-icon {
+        min-width: 20px;
+        height: 20px;
+    }
+
+    .contact-icon i {
+        font-size: 10px;
+    }
+
+    .contact-content h3 {
+        font-size: 14px;
+    }
+}
 
 /* ==================== Skills section css code ============================ */
 
